@@ -20,6 +20,9 @@ This app uses a simplified setup:
 
 Try to rebuild this thing on your own!
 
-Never copy paste, young grasshopper! Trust me, you do not get anything out of it...
+Never copy paste, young grasshopper! 
+
+Trust me, you do not get anything out of it...
+
 (but "stealing" code by looking it up, memoizing a piece and trying to apply it on our own, building the app up step by step, is a good thing, of course :))
 
