@@ -1,0 +1,176 @@
+* {
+  font-family: 'Roboto', sans-serif;
+  /* font-family: monospace; */
+  /* font-family: 'Tenali Ramakrishna', sans-serif; */
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+}
+
+header {
+  background-color: #ccc;
+  height: 15vh;
+  color: #282c34;
+  font-size: 1.5rem;
+  /* border: 10px solid rgba(0,0,0, 0.7); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  background-color: #282c34;
+  color: white;
+  height: 75vh;
+  overflow: auto;
+  padding: 30px 50px;
+}
+
+footer {
+  height: 10vh;
+  display: grid;
+  place-items: center;
+  background-color: #ccc;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.books-container {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.books {
+  display: flex;
+  flex-direction: column;
+  min-height: 30vh;
+  font-weight: bold;
+}
+
+.book {
+  padding: 8px;
+  margin: 10px;
+  background-color: #ccc;
+  border-radius: 50px;
+  color: #282c34;
+  opacity: 0.9;
+
+  position: relative; // container to align action icons
+
+  .book-title {
+    font-size: 1.2rem;
+    margin-bottom: 2px;
+  }
+  .book-author {
+    font-size: 0.8rem;
+  }  
+
+  .book-form-edit {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    input {
+      background: transparent;
+      border: none;
+      border-bottom: 1px dotted #999;
+      text-align: center;
+      border-radius: 20px;
+      padding: 3px 0;
+      outline: none;
+      width: 200px;
+    }
+
+    .book-title, .book-author {
+      font-weight: normal;
+    }
+
+  }
+  
+  .book-actions {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+
+    svg {
+      margin: 5px;
+      &:hover {
+        color: #2a5cc0;
+      }
+    }
+  }
+
+  &:hover {
+    opacity: 0.75;
+  }  
+
+}  
+
+
+.form-filter {
+  width: 100%;
+}
+
+.form-add, .form-filter {
+  padding: 10px;
+  display: flex;
+
+  & > * {
+    padding: 10px;
+    background-color: #ccc;
+    color: #282c34;
+    border-radius: 20px;
+  }
+}
+
+.form-filter, .form-add {
+
+  input {
+    flex-grow: 1;
+    outline: none;
+
+    &::placeholder {
+      text-align: center;
+      font-size: 1.0rem;
+      font-weight: bold;
+    }
+
+    &:focus::placeholder {
+      font-weight: normal
+    }
+    
+    &:focus {
+      opacity: 0.8;
+      font-weight: bold;
+    }
+  
+  }
+
+  button:hover {
+    opacity: 0.8;
+  }
+
+}
+
+.form-add  {
+  input {
+    margin-right: 10px;
+  }
+}
+
+h1 {
+  text-shadow: 2px 2px 2px white;
+  font-family: 'Indie Flower', cursive;
+}
+
+.errors {
+  color: red;
+  font-weight: bold;
+}
