@@ -2,6 +2,8 @@
 
 The Book List app is a nice training app for practicing React state and props.
 
+Demo: https://book-app-rose.vercel.app
+
 We will apply the four essential CRUD operations:
 - C - Create: Add new book entries to the list
 - R - Read: Filter entries in the list when user types a searchterm (=> filter means: HIDING infos, not deleting!)
