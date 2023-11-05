@@ -11,7 +11,8 @@ We will apply the four essential CRUD operations:
 - D - Delete: Remove a book from the list
 
 This app uses a simplified setup:
-- just Components, Events, State and Props
+- Components, Events, State and Props
+- LocalStorage and useEffect for Data Storage and Data Fetching 
 - No React Router
 - No Context
 - And nothing even more complicated :)
