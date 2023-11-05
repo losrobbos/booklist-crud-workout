@@ -1,7 +1,4 @@
-import React from 'react';
-
-const FilterForm = ({ searchTerm, searchTermChange} ) => {
-  
+const FilterForm = ({ searchTerm, searchTermChange }) => {
   return (
     <form className="form-filter">
       <input
@@ -12,6 +9,6 @@ const FilterForm = ({ searchTerm, searchTermChange} ) => {
       />
     </form>
   );
-}
+};
 
 export default FilterForm;

@@ -1,63 +1,54 @@
-import React, { Component } from 'react';
+import { useState } from "react";
 
-class BookAddForm extends Component {
+const BookAddForm = (props) => {
+  const [bookNew, setBookNew] = useState({ title: "", author: "" });
+  const [errors, setErrors] = useState("");
 
-  state = {
-    bookNew: { title: '', author: '' }
+  const handleTitleChange = (title) => {
+    setBookNew({ ...bookNew, title });
   };
 
-  handleTitleChange = (title) => {
-    this.setState({bookNew: {...this.state.bookNew, title }})
-  }
+  const handleAuthorChange = (author) => {
+    setBookNew({ ...bookNew, author });
+  };
 
-  handleAuthorChange = (author) => {
-    this.setState({bookNew: {...this.state.bookNew, author }})
-  }
-
-  addBook = (e) => {
-    e.preventDefault() // prevent submitting of the form
+  const addBook = (e) => {
+    e.preventDefault(); // prevent submitting of the form
 
     // validate
-    let matchResult = this.state.bookNew.title.match(/\w{3,}/)
-    if(matchResult) {
+    let matchResult = bookNew.title.match(/\w{3,}/);
+    if (matchResult) {
       // send our book "upwards"
-      this.props.addBook(this.state.bookNew)
-      this.setState({ 
-        bookNew: { title: "", author: "" },
-        errors: "" 
-      })
+      props.addBook(bookNew);
+
+      // clear form entries
+      setBookNew({ title: "", author: "" });
+      setErrors("");
+    } else {
+      setErrors("Title must be minimum 3 characters");
     }
-    else {
-      this.setState({ errors: "Title must be minimum 3 characters" })
-    }
+  };
 
-  }
-
-  render() {
-
-    let bookNew = this.state.bookNew
-
-    return (
-      <>
-      <form className="form-add" onSubmit={ this.addBook }>
+  return (
+    <>
+      <form className="form-add" onSubmit={addBook}>
         <input
           type="text"
           placeholder="Book title..."
           value={bookNew.title}
-          onChange={(e) => this.handleTitleChange(e.target.value)}
+          onChange={(e) => handleTitleChange(e.target.value)}
         />
         <input
           type="text"
           placeholder="Author..."
           value={bookNew.author}
-          onChange={(e) => this.handleAuthorChange(e.target.value)}
+          onChange={(e) => handleAuthorChange(e.target.value)}
         />
         <button type="submit">ADD</button>
       </form>
-      <div className="errors">{this.state.errors}</div>
-      </>
-    );
-  }
-}
+      <div className="errors">{errors}</div>
+    </>
+  );
+};
 
 export default BookAddForm;
