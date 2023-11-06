@@ -1,6 +1,6 @@
 # Book List Mini App (React)
 
-The Book List app is a nice training app for practicing React state and props.
+The Book List app is a nice training app for practicing React state.
 
 Demo: https://book-app-rose.vercel.app
 
