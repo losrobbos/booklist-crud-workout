@@ -11,9 +11,9 @@ We will apply the four essential CRUD operations on book data:
 - D - Delete: Remove a book from the list
 
 The good thing is:
-That are basically ALL data operations out there! There is not much more you could do with data...
+That are the basic data operations out there! There is not much more you could do with data... (usually just more complicated filterings)
 
-So by getting intuitive in those four operations, you will also become much more proficient not just in React. But in coding in general.
+So by getting intuitive in those four essential operations, you will also become much more proficient not just in React. But coding in general.
 
 This app uses a simplified setup:
 - Components, Events, State and Props
