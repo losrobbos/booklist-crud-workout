@@ -13,7 +13,7 @@ We will apply the four essential CRUD operations on book data:
 The good thing is:
 That are basically ALL data operations out there! There is not much more you could do with data...
 
-So by getting intuitive in those four operations, you will also become much more proficient in React in general.
+So by getting intuitive in those four operations, you will also become much more proficient not just in React. But in coding in general.
 
 This app uses a simplified setup:
 - Components, Events, State and Props
