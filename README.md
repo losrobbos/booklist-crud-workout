@@ -12,7 +12,7 @@ We will apply the four essential CRUD operations:
 
 This app uses a simplified setup:
 - Components, Events, State and Props
-- LocalStorage and useEffect for Data Storage and Data Fetching 
+- LocalStorage and useEffect for Data Storage
 - No React Router
 - No Context
 - And nothing even more complicated :)
